@@ -1,11 +1,14 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 ## Instalação e uso
-- 1.
+- 1. Clone o projeto: git@github.com:lucashfernandes91/AdminLTE-Laravael-5.5.git
+- 2. Instale composer: Acesse a pasta principal do projeto clonado e execute - "composer install"
+- 3. Ative o sevidor: php artisan serve 
 
-## Tópicos à serem criados
-- O que contempla, ferramentas disponíveis
-- 
+## Tópicos à serem criados(Por enquanto)
+- O que contempla
+- Ferramentas disponíveis
+
 
 ## Instalação
 

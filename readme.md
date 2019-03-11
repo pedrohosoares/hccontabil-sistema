@@ -13,7 +13,7 @@
 
 ## O que contempla
 - Página de cadastro de Clientes
-*Página de cadastro de Fornecedores
+- *Página de cadastro de Fornecedores
 
 
 ## Sugestões de melhorias
@@ -21,7 +21,7 @@
 Fique à vontadade para entrar em contato e debatermos sobre melhorias para a ferramenta, [lucashfernandes@yahoo.com.br](mailto:lucashfernandes@yahoo.com.br).
 
 ## Referências
-Integrando o Laravel 5.5 com o AdminLTE: https://www.youtube.com/watch?v=hbK1q4YTtkM
+- Integrando o Laravel 5.5 com o AdminLTE: https://www.youtube.com/watch?v=hbK1q4YTtkM
 
 ## Licença
 

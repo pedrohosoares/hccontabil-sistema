@@ -2,7 +2,7 @@
 
 ## Instalação e uso
 
-1. Clone o projeto: git@github.com:lucashfernandes91/AdminLTE-Laravael-5.5.git
+1. Clone o projeto: git clone git@github.com:lucashfernandes91/AdminLTE-Laravael-5.5.git
 2. Instale composer: Acesse a pasta principal do projeto clonado e execute - "composer install"
 3. Ative o sevidor: php artisan serve 
 
@@ -18,7 +18,7 @@
 
 ## Sugestões de melhorias
 
-Fique à vontadade para entrar em contato e debatermos sobre melhorias para a ferramenta, [lucashfernandes@yahoo.com.br](mailto:lucashfernandes@yahoo.com.br).
+Fique à vontadade para entrar em contato e debatermos sobre melhorias para a ferramenta [lucashfernandes@yahoo.com.br](mailto:lucashfernandes@yahoo.com.br).
 
 ## Referências
 - Integrando o Laravel 5.5 com o AdminLTE: https://www.youtube.com/watch?v=hbK1q4YTtkM

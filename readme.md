@@ -2,10 +2,14 @@
 
 ## Instalação e uso
 
-1. Clone o projeto: 
-    - git clone git@github.com:lucashfernandes91/AdminLTE-Laravael-5.5.git
-2. Instale composer: Acesse a pasta principal do projeto clonado e execute - "composer install"
-3. Ative o sevidor: php artisan serve 
+1. Clone o projeto 
+    - Execute: git clone git@github.com:lucashfernandes91/AdminLTE-Laravael-5.5.git
+2. Instale composer
+    - Acesse a pasta principal do projeto clonado
+    - Execute: composer install
+    
+3. Ative o sevidor
+    - Execute: php artisan serve 
 
 
 ## Tópicos à serem criados(Por enquanto)

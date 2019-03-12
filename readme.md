@@ -24,7 +24,7 @@ Fique à vontadade para entrar em contato e debatermos sobre melhorias para a fe
 
 ## Referências
 - Integrando o Laravel 5.5 com o AdminLTE: https://www.youtube.com/watch?v=hbK1q4YTtkM
-- https://github.com/jeroennoten/Laravel-AdminLTE
+- Documentação de Integração : https://github.com/jeroennoten/Laravel-AdminLTE
 
 ## Licença
 

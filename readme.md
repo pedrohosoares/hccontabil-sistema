@@ -4,6 +4,7 @@
 
 1. Clone o projeto 
     - Execute: git clone git@github.com:lucashfernandes91/AdminLTE-Laravael-5.5.git
+    
 2. Instale composer
     - Acesse a pasta principal do projeto clonado
     - Execute: composer install
@@ -12,13 +13,9 @@
     - Execute: php artisan serve 
 
 
-## Tópicos à serem criados(Por enquanto)
-
-- Ferramentas disponíveis
-
-## O que contempla
-- Página de cadastro de Clientes
-- *Página de cadastro de Fornecedores
+## O que contempla (Todas módulos contém as funções de CRUD padrão)
+- Módulo de cadastro de Clientes 
+- *Página de cadastro de Fornecedores (Em desenvolvimento)
 
 
 ## Sugestões de melhorias

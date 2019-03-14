@@ -121,14 +121,28 @@ return [
             'label'       => 4,
             'label_color' => 'success',
         ],
-        'ACCOUNT SETTINGS',
+        'SISTEMA DE CADASTRO',
         [
-            'text' => 'Profile',
+            'text'    => 'Clientes',
+            'icon'    => 'users',
+            'submenu' => [
+                [
+                    'text' => 'Lista de Clientes',
+                    'url'  => 'admin/customers/form',
+                ],                
+                [
+                    'text' => 'Cadastrar Cliente',
+                    'url'  => '#',
+                ],
+            ],
+        ],
+        [
+            'text' => 'Fornecedores',
             'url'  => 'admin/settings',
             'icon' => 'user',
         ],
         [
-            'text' => 'Change Password',
+            'text' => 'Mercadorias',
             'url'  => 'admin/settings',
             'icon' => 'lock',
         ],
@@ -170,19 +184,7 @@ return [
                 ],
             ],
         ],
-        'LABELS',
-        [
-            'text'       => 'Important',
-            'icon_color' => 'red',
-        ],
-        [
-            'text'       => 'Warning',
-            'icon_color' => 'yellow',
-        ],
-        [
-            'text'       => 'Information',
-            'icon_color' => 'aqua',
-        ],
+
     ],
 
     /*

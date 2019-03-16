@@ -128,7 +128,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Lista de Clientes',
-                    'url'  => 'admin/customers/form',
+                    'url'  => 'admin/customers/',
                 ],                
                 [
                     'text' => 'Cadastrar Cliente',

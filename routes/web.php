@@ -8,9 +8,10 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::group(['namespace' => 'Admin', 'prefix' => 'admin'], function() {
+Route::group(['prefix' => 'admin'], function() {    
 
-    Route::group(['namespace' => 'customers', 'prefix' => 'customers'], function() {
-        Route::get('/', 'CustomerController@index');
+    Route::group(['prefix' => 'customers'], function() {
+        Route::get('/', 'Customer\\CustomerController@index')->name('index');
     });
 });
+

@@ -12,7 +12,8 @@ Route::group(['prefix' => 'admin'], function() {
 
     Route::group(['prefix' => 'clientes'], function() {
         Route::get('/index', 'Admin\\ClientesController@index')->name('clientes.index');
-        Route::get('/form', 'Admin\\ClientesController@formu')->name('clientes.form');
+        Route::get('/form', 'Admin\\ClientesController@form')->name('clientes.form');
+        Route::post('/store', 'Admin\\ClientesController@store')->name('clientes.store');
     });
 });
 

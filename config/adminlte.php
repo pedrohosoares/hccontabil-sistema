@@ -124,17 +124,8 @@ return [
         'SISTEMA DE CADASTRO',
         [
             'text'    => 'Clientes',
+            'url'     => 'admin/clientes/index',  
             'icon'    => 'users',
-            'submenu' => [
-                [
-                    'text' => 'Lista de Clientes',
-                    'url'  => 'admin/customers/',
-                ],                
-                [
-                    'text' => 'Cadastrar Cliente',
-                    'url'  => '#',
-                ],
-            ],
         ],
         [
             'text' => 'Fornecedores',

@@ -47,7 +47,7 @@
             </div>
 
             <div class="col-md-2">
-                <a href="{{ route('clientes.formulario')}}" class="btn btn-primary"> Cadastrar Cliente </a>
+                <a href="{{ route('clientes.form')}}" class="btn btn-primary"> Cadastrar Cliente </a>
             </div>
         </div>
     </div><!-- /.box-header -->

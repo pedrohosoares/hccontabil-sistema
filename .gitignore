@@ -1,6 +1,4 @@
 *.sqlite
 .env
-/vendor/
+vendor/
 node_modules/
-vendor/composer/autoload_static.php
-vendor/composer/autoload_classmap.php

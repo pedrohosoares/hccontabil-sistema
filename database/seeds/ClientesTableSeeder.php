@@ -12,7 +12,6 @@ class ClientesTableSeeder extends Seeder
             'telefone' => mt_rand(100000, 999999),
             'whatsapp' => mt_rand(100000, 999999),
             'endereco' => str_random(10),
-            'bairro'   => 'Bairro',
             'cidade'   => 'SAP',
             'estado'   => 'RS'
         ]);

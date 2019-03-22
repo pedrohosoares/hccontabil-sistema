@@ -22,7 +22,6 @@ class CreateClientesTable extends Migration
             $table->string('whatsapp');
 
             $table->string('endereco');
-            $table->string('bairro');
             $table->string('cidade');
             $table->string('estado', 2);
             $table->timestamps();

@@ -11,7 +11,11 @@ class Cliente extends Model
     public $fillable = [
         'nome',
         'email',
-        'telefone'
+        'telefone',
+        'whatsapp',
+        'endereco',
+        'cidade',
+        'estado'
     ];
        
 }

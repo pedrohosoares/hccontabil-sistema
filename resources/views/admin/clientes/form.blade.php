@@ -33,14 +33,35 @@
             </div>
 
             <div class="form-group">
+                <label for="whatsapp">WhatsApp</label>
+                <input type="number" class="form-control" name="whatsapp" placeholder="Informe o WhatsApp do cliente..."  required>
+            </div>
+
+            <div class="form-group">
                 <label for="email">E-mail</label>
                 <input type="email" class="form-control" name="email" placeholder="Informe o E-mail do cliente..." required>
+            </div>
+
+            <div class="form-group">
+                <label for="endereco">Endereço</label>
+                <input type="text" class="form-control" name="endereco" placeholder="Informe o Endereço do cliente..."  required>
+            </div>
+
+            <div class="form-group">
+                <label for="cidade">Cidade</label>
+                <input type="string" class="form-control" name="cidade" placeholder="Informe a Cidade do cliente..."  required>
+            </div>
+
+            <div class="form-group">
+                <label for="estado">Estado</label>
+                <input type="text" class="form-control" name="estado" placeholder="Informe o Telefone do cliente..."  required>
             </div>
         </div>
         <!-- /.box-body -->
 
         <div class="box-footer">
-            <button type="submit" class="btn btn-primary">Cadastrar</button>
+            <button type="submit" class="btn btn-primary"><strong>Cadastrar</strong></button>
+            <a href="{{ route('clientes.index') }}" class="btn btn-primary">Voltar</a>
         </div>
     </form>
 </div>

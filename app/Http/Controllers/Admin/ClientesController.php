@@ -28,7 +28,7 @@ class ClientesController extends Controller
     public function show($id){
         $cliente = Cliente::find($id);
 
-        return view('admin/clientes/detalhes', compact('cliente'));
+        return view('admin/clientes/show', compact('cliente'));
     }
 
     public function edit($id){

@@ -7,7 +7,7 @@
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
         <li><a href="#">Clientes</a></li>
-        <li class="active">Cadastrar Cliente</li>
+        <li class="active">Detalhes do Cliente</li>
     </ol>
 @stop
 
@@ -15,7 +15,7 @@
 
 <div class="box box-primary">
     <div class="box-header with-border">
-        <h3 class="box-title">Cadastrar Cliente</h3>
+        <h3 class="box-title">Detalhes do Cliente</h3>
     </div><!-- /.box-header -->
 
     <!-- form start -->
@@ -59,7 +59,7 @@
             <!-- /.box-body -->
 
             <div class="box-footer">
-                <button type="submit" class="btn btn-warning">Editar</button>
+                <a href="{{ route('clientes.edit', $cliente->id) }}" class="btn btn-warning">Editar</a>
                 <a href="{{ route('clientes.index') }}" class="btn btn-primary">Voltar</a>
             </div>
         </div>

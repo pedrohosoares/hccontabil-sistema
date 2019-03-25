@@ -72,7 +72,7 @@
                 <td> 
                     <a type="button" href="{{ url('admin/clientes/show', $cliente->id) }}" class="btn btn-success" btn-sm>Visualizar</a>
                     <a type="button" href="{{ url('admin/clientes/edit', $cliente->id) }}" class="btn btn-warning" btn-sm>Editar</a>
-                    <a type="button" href="{{ url('admin/clientes/delete', $cliente->id)}}" class="btn btn-danger" btn-sm>Excluir</a>
+                    <a type="button" href="{{ url('admin/clientes/delete', $cliente)}}" class="btn btn-danger" btn-sm>Excluir</a>
                 </td>                    
             </tr>
             @endforeach

@@ -34,24 +34,31 @@ class ClientesController extends Controller
     public function edit($id){
         $cliente = Cliente::find($id);
 
-        return view('admin/clientes/editar', compact('cliente', 'id'));
+        return view('admin/clientes/edit', compact('cliente', 'id'));
     }
 
     public function update(Request $request){
         $cliente = Cliente::find($request->id);
+        
         $cliente->nome = $request->nome;
         $cliente->telefone = $request->telefone;
+        $cliente->whatsapp = $request->whatsapp;
         $cliente->email = $request->email;
+        $cliente->endereco = $request->endereco;
+        $cliente->cidade = $request->cidade;
+        $cliente->estado = $request->estado;
         $cliente->save();        
 
-        if ($cliente)
+        if ($cliente){
             return redirect()->route('clientes.index')->with('sucesso', 'Cliente Alterado!');
+        }
     }
 
-    public function delete($id){
-        $cliente = Cliente::find($id);        
-        $cliente->delete();
-        
-        return redirect ()->route('clientes.index')->with('sucesso', 'Cliente excluído!');
+    public function delete(Request $request){
+        $cliente = Cliente::where('id',$request->id)->delete();
+
+        if($cliente){
+            return redirect ()->route('clientes.index')->with('sucesso', 'Cliente excluído!');
+        }
     }
 }

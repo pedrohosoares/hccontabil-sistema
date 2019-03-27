@@ -1,4 +1,4 @@
-@extends('adminlte::page')
+ @extends('adminlte::page')
 
 @section('title', 'AdminLTE')
 
@@ -16,7 +16,7 @@
 <div class="box box-primary">
     <div class="box-header with-border">
         <h3 class="box-title">Detalhes do Cliente</h3>
-    </div><!-- /.box-header -->
+    </div>
 
     <!-- form start -->
     <form role="form" method="POST" action="{{ route('clientes.store') }}">
@@ -56,7 +56,6 @@
                 <label for="estado">Estado</label>
                 <p>{{ $cliente->estado }}</p>
             </div>
-            <!-- /.box-body -->
 
             <div class="box-footer">
                 <a href="{{ route('clientes.edit', $cliente->id) }}" class="btn btn-warning">Editar</a>

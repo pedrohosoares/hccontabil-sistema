@@ -124,7 +124,7 @@ return [
         'SISTEMA DE CADASTRO',
         [
             'text'    => 'Clientes',
-            'url'     => 'admin/clientes/index',  
+            'url'     => 'admin/clientes',  
             'icon'    => 'users',
         ],
         [

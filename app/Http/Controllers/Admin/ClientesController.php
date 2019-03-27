@@ -9,7 +9,7 @@ use App\Models\Cliente;
 class ClientesController extends Controller
 {
     public function index(){
-        $clientes = Cliente::orderBy('id', 'desc')->paginate(5);
+        $clientes = Cliente::orderBy('id', 'desc')->paginate(10);
         
         return view('admin/clientes/index', compact('clientes'));        
     }
@@ -58,7 +58,19 @@ class ClientesController extends Controller
         $cliente = Cliente::where('id',$request->id)->delete();
 
         if($cliente){
-            return redirect ()->route('clientes.index')->with('sucesso', 'Cliente excluído!');
+            return redirect()->route('clientes.index')->with('sucesso', 'Cliente excluído!');
+        }
+    }
+
+    public function search(Request $request){
+        $pesquisa = $request->pesquisar;
+
+        $clientes = Cliente::pesquisa($request->pesquisar);
+
+        if(count($clientes) > 0){
+            return view('admin/clientes/search', compact('clientes', 'pesquisa'));            
+        } else {
+            return redirect()->route('clientes.index')->with('error', 'Nenhum Registro Encontrado!');
         }
     }
 }

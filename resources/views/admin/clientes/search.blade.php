@@ -6,7 +6,8 @@
     <h1>Dashboard</h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active">Clientes</li>
+        <li><a href="#"> Clientes</a></li>
+        <li class="active">Pesquisar Cliente</li>
     </ol>
 @stop
 
@@ -14,35 +15,8 @@
 
 <div class="box box-primary col-xs-12">    
     <div class="box-header">
-
-        <div class="row"> <!-- MODAL -->
-            <div class="col-md-4"></div>
-
-            <div class="col-md-4">
-                @if ($message = Session::get('sucesso'))
-                    <div class="alert alert-success alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-check"></i>{{ $message }}</h4>
-                    </div>
-                @endif
-            </div>
-        </div>
-
         <div class="row">
-            <div class="col-md-4"></div>
-
-            <div class="col-md-4">
-                @if ($message = Session::get('error'))
-                    <div class="alert alert-danger alert-dismissible">
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                        <h4><i class="icon fa fa-close"></i>{{ $message }}</h4>
-                    </div>
-                @endif
-            </div> <!-- MODAL -->
-        </div>
-
-        <div class="row">
-            <h3 class="box-title col-md-3">Clientes</h3>           
+            <h3 class="box-title col-md-3">Pesquisado por: <strong>{{ $pesquisa }}</strong></h3>           
 
             <div class="box-tools col-md-6">
                 <form role="form" action="{{ route('clientes.pesquisar') }}" method="POST" >
@@ -61,9 +35,6 @@
                 
             </div>
 
-            <div class="col-md-2">
-                <a href="{{ route('clientes.form')}}" class="btn btn-primary"> Cadastrar Cliente </a>
-            </div>
         </div>
     </div><!-- /.box-header -->
 
@@ -93,13 +64,12 @@
             @endforeach
             </tbody>
         </table>
+
+        <div class="box-footer">
+            <a href="{{ route('clientes.index') }}" class="btn btn-primary">Voltar</a>
+        </div>
+
     </div><!-- /.box-body -->
-
-    <!-- PAGINAÇÃO -->
-    {{ $clientes->links() }}    
-
 </div><!-- /.box -->
-
-
     
 @stop

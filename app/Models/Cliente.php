@@ -17,5 +17,9 @@ class Cliente extends Model
         'cidade',
         'estado'
     ];
+
+    public static function pesquisa($pesquisar){
+        return static::where('nome', 'LIKE', '%' . $pesquisar . '%')->paginate(10);
+    }
        
 }

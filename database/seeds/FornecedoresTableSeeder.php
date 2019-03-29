@@ -17,7 +17,7 @@ class FornecedoresTableSeeder extends Seeder
             'email'    => str_random(5).'@gmail.com',
             'telefone' => mt_rand(100000000, 999999999),
             'whatsapp' => mt_rand(100000000, 999999999),
-            'site'	   => 'www'.str_random(10).'com',
+            'site'	   => 'www.'.str_random(10).'.com',
             'endereco' => str_random(10),
             'cidade'   => 'SAP',
             'estado'   => 'RS'

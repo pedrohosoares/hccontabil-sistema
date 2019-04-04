@@ -15,7 +15,8 @@
 
 ## O que contempla (Todas módulos contém as funções de CRUD padrão)
 - Módulo de cadastro de Clientes 
-- *Página de cadastro de Fornecedores (Em desenvolvimento)
+- Página de cadastro de Fornecedores
+- *Página de cadastro de Mercadorias (Em desenvolvimento)
 
 
 ## Sugestões de melhorias

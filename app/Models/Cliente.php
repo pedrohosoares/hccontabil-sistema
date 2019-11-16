@@ -15,7 +15,12 @@ class Cliente extends Model
         'whatsapp',
         'endereco',
         'cidade',
-        'estado'
+        'estado',
+        'dados'
+    ];
+
+    protected $casts = [
+        'dados'=>'json'
     ];
 
     public static function pesquisa($pesquisar){

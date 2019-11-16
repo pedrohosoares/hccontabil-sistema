@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 2',
+    'title' => 'HCContabil',
 
     'title_prefix' => '',
 
@@ -30,9 +30,9 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>HCContabil</b>',
 
-    'logo_mini' => '<b>A</b>LT',
+    'logo_mini' => 'HC',
 
     /*
     |--------------------------------------------------------------------------
@@ -108,19 +108,6 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
-        [
-            'text' => 'Blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'Pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
         'SISTEMA DE CADASTRO',
         [
             'text'    => 'Clientes',
@@ -128,15 +115,11 @@ return [
             'icon'    => 'users',
         ],
         [
-            'text' => 'Fornecedores',
-            'url'  => 'admin/settings',
-            'icon' => 'user',
-        ],
-        [
-            'text' => 'Mercadorias',
-            'url'  => 'admin/settings',
-            'icon' => 'lock',
-        ],
+            'text'    => 'Usuários',
+            'url'     => 'admin/usuarios',  
+            'icon'    => 'user',
+        ]
+        /*,
         [
             'text'    => 'Multilevel',
             'icon'    => 'share',
@@ -175,7 +158,7 @@ return [
                 ],
             ],
         ],
-
+        */
     ],
 
     /*

@@ -1,6 +1,6 @@
  @extends('adminlte::page')
 
-@section('title', 'AdminLTE')
+@section('title', 'HCContabil')
 
 @section('content_header')
     <h1>Dashboard</h1>
@@ -56,7 +56,19 @@
                 <label for="estado">Estado</label>
                 <p>{{ $cliente->estado }}</p>
             </div>
-
+            <?php
+                $dados = json_decode($cliente->dados,true);
+                if(!empty($dados) and isset($dados[0])){
+                    foreach($dados[0] as $i=>$v):
+                    ?>
+                    <div class="form-group">
+                        <label for="<?php echo $i; ?>"><?php echo $i; ?></label>
+                        <p>{{ $v }}</p>
+                    </div>
+                    <?php
+                    endforeach;
+                }
+            ?>
             <div class="box-footer">
                 <a href="{{ route('clientes.edit', $cliente->id) }}" class="btn btn-warning">Editar</a>
                 <a href="{{ route('clientes.index') }}" class="btn btn-primary">Voltar</a>

@@ -10,7 +10,6 @@ class ClientesController extends Controller
 {
     public function index(){
         $clientes = Cliente::orderBy('id', 'desc')->paginate(10);
-        
         return view('admin/clientes/index', compact('clientes'));        
     }
 
@@ -47,6 +46,7 @@ class ClientesController extends Controller
         $cliente->endereco = $request->endereco;
         $cliente->cidade = $request->cidade;
         $cliente->estado = $request->estado;
+        $cliente->dados = $request->dados;
         $cliente->save();        
 
         if ($cliente){

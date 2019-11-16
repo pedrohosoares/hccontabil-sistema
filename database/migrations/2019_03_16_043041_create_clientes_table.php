@@ -24,6 +24,7 @@ class CreateClientesTable extends Migration
             $table->string('endereco');
             $table->string('cidade');
             $table->string('estado', 2);
+            $table->text('dados');
             $table->timestamps();
         });
     }

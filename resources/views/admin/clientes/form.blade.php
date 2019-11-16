@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'AdminLTE')
+@section('title', 'HCContabil')
 
 @section('content_header')
     <h1>Dashboard</h1>
@@ -19,9 +19,9 @@
     </div><!-- /.box-header -->
 
     <!-- form start -->
-    <form role="form" method="POST" action="{{ route('clientes.store') }}">
+    <form id="formulario" role="form" method="POST" action="{{ route('clientes.store') }}">
     {{ csrf_field() }}
-        <div class="box-body">
+        <div class="box-body campos">
             <div class="form-group" >
                 <label for="nome">Nome</label>
                 <input type="text" class="form-control" name="nome" placeholder="Informe o nome do cliente..." required>
@@ -56,16 +56,18 @@
                 <label for="estado">Estado</label>
                 <input type="text" class="form-control" name="estado" placeholder="Ex.: RS, SC, SP"  maxlength="2" required>
             </div>
+            <input type="hidden" name="dados" />
         </div>
 
         
         <!-- /.box-body -->
 
         <div class="box-footer">
+            <div onclick="addCampo();" class="btn btn-default add-campo"><i class="fa fa-plus"></i> Add Campo </div>
             <button type="submit" class="btn btn-primary"><strong>Cadastrar</strong></button>
             <a href="{{ route('clientes.index') }}" class="btn btn-primary">Voltar</a>
         </div>
     </form>
 </div>
-    
+    <script src="<?php echo asset('js/clientes.js'); ?>"></script>
 @stop

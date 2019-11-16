@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'AdminLTE')
+@section('title', 'HCContabil')
 
 @section('content_header')
     <h1>Dashboard</h1>
@@ -19,9 +19,9 @@
     </div><!-- /.box-header -->
 
     <!-- form start -->
-    <form role="form" method="POST" action="{{ route('clientes.update') }}">
+    <form id="formulario" role="form" method="POST" action="{{ route('clientes.update') }}">
     {{ csrf_field() }}
-        <div class="box-body">
+        <div class="box-body campos">
             <input type="hidden" name="id" value="{{ $cliente->id }}">
 
             <div class="form-group" >
@@ -58,16 +58,35 @@
                 <label for="estado">Estado</label>
                 <input type="text" class="form-control" value="{{ $cliente->estado }}" name="estado" placeholder="Ex.: RS, SC, SP"  maxlength="2" required>
             </div>
+                <?php
+            $dados = json_decode($cliente->dados,true);
+            if(isset($dados[0])){ 
+                foreach($dados[0] as $i=>$v){
+                    ?>
+                        <div class="form-group novo_campo"> 
+                                <label style="cursor:pointer;" for="novo_campo" ><?php echo $i; ?></label> 
+                                <div class="input-group"> 
+                                        <input type="text" class="form-control" value="<?php echo $v; ?>" name="<?php echo $i; ?>" placeholder="" required> 
+                                        <span onclick="excluir(this);" style="cursor: pointer;" class="input-group-addon" class="remove"><i class="fa fa-remove"></i></span>
+                                    </div>
+                        </div>
+                        
+                    <?php
+                }
+            }
+            ?>
+            <input type="hidden" name="dados" value="{{ $cliente->dados }}" />
         </div>
 
         
         <!-- /.box-body -->
 
         <div class="box-footer">
+            <div onclick="addCampo();" class="btn btn-default add-campo"><i class="fa fa-plus"></i> Add Campo </div>
             <button type="submit" class="btn btn-primary"><strong>Salvar</strong></button>
             <a href="{{ route('clientes.index') }}" class="btn btn-primary">Voltar</a>
         </div>
     </form>
 </div>
-    
+<script src="<?php echo asset('js/clientes.js'); ?>"></script>
 @stop

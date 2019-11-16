@@ -26,4 +26,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public static function pesquisa($pesquisar){
+        return static::where('email', 'LIKE', '%' . $pesquisar . '%')->paginate(10);
+    }
 }

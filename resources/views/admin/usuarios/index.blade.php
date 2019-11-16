@@ -6,7 +6,7 @@
     <h1>Dashboard</h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Dashboard</a></li>
-        <li class="active">Clientes</li>
+        <li class="active">Usuários</li>
     </ol>
 @stop
 
@@ -42,10 +42,10 @@
         </div>
 
         <div class="row">
-            <h3 class="box-title col-md-3">Clientes</h3>           
+            <h3 class="box-title col-md-3">Usuários</h3>           
 
             <div class="box-tools col-md-6">
-                <form role="form" action="{{ route('clientes.pesquisar') }}" method="POST" >
+                <form role="form" action="{{ route('usuarios.pesquisar') }}" method="POST" >
                     {{ csrf_field() }}
                     <div class="form input-group input-group-sm" >
                     <input type="text" name="pesquisar" class="form-control pull-right" placeholder="Pesquisar...">
@@ -62,7 +62,7 @@
             </div>
 
             <div class="col-md-2">
-                <a href="{{ route('clientes.form')}}" class="btn btn-primary"> Cadastrar Cliente </a>
+                <a href="{{ route('usuarios.form')}}" class="btn btn-primary"> Cadastrar Usuários </a>
             </div>
         </div>
     </div><!-- /.box-header -->
@@ -72,22 +72,18 @@
             <tbody>
             <tr>
                <th style="width:90px;" class="col-md-3">Nome</th>
-               <th class="col-md-2">WhatsApp</th>
-               <th class="col-md-2">Telefone</th>
                <th class="col-md-3">E-mail</th>
                <th class="col-md-3">Ações</th>
             </tr>
 
             @foreach ($clientes as $cliente)
             <tr>                
-                <td> {{ $cliente->nome }} </td>
-                <td> <a target="_blank" href="https://api.whatsapp.com/send?phone={{ $cliente->whatsapp }}&text=Olá "><img height="30px" src="<?php echo asset('img/whatsapp.png'); ?>" /></a> </td>
-                <td> {{ $cliente->telefone }} </td>
+                <td> {{ $cliente->name }} </td>
                 <td> {{ $cliente->email }} </td>
                 <td> 
-                    <a type="button" href="{{ url('admin/clientes/show', $cliente->id) }}" class="btn btn-success" btn-sm>Visualizar</a>
-                    <a type="button" href="{{ url('admin/clientes/edit', $cliente->id) }}" class="btn btn-warning" btn-sm>Editar</a>
-                    <a type="button" href="{{ url('admin/clientes/delete', $cliente)}}" class="btn btn-danger" btn-sm>Excluir</a>
+                    <a type="button" href="{{ url('admin/usuarios/show', $cliente->id) }}" class="btn btn-success" btn-sm>Visualizar</a>
+                    <a type="button" href="{{ url('admin/usuarios/edit', $cliente->id) }}" class="btn btn-warning" btn-sm>Editar</a>
+                    <a type="button" href="{{ url('admin/usuarios/delete', $cliente)}}" class="btn btn-danger" btn-sm>Excluir</a>
                 </td>                    
             </tr>
             @endforeach
